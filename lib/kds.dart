@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_list_drag_and_drop/drag_and_drop_list.dart';
 
-class HomePage extends StatefulWidget {
+class KDS extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _KDSState createState() => _KDSState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _KDSState extends State<KDS> {
   List<String> cards = ["ToDo", "Completed"];
   List<List<String?>> childres = [
     ["ToDo 1", "ToDo 2"],
@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Trello Cards"),
+        title: Text("Flipper KDS"),
       ),
       body: _buildBody(),
     );

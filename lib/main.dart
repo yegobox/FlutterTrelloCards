@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:trellocards/home_page.dart';
+import 'package:trellocards/kds.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(KDSStandalone());
 
-class MyApp extends StatelessWidget {
+class KDSStandalone extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: KDS(),
     );
   }
 }
