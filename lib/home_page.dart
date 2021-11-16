@@ -8,7 +8,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<String> cards = ["ToDo", "Completed"];
-  List<List<String>> childres = [
+  List<List<String?>> childres = [
     ["ToDo 1", "ToDo 2"],
     ["Done 1", "Done 2"],
   ];
@@ -205,10 +205,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _buildCard(BuildContext context, int index) {
-    // return Container(
-    //         width: 300.0,
-    //   child: ,
-    // );
     return Container(
       child: Stack(
         children: <Widget>[
@@ -243,7 +239,7 @@ class _HomePageState extends State<HomePage> {
                 SingleChildScrollView(
                   child: Container(
                     height: MediaQuery.of(context).size.height * 0.7,
-                    child: DragAndDropList<String>(
+                    child: DragAndDropList<String?>(
                       childres[index],
                       itemBuilder: (BuildContext context, item) {
                         return _buildCardTask(
@@ -261,18 +257,20 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           Positioned.fill(
-            child: DragTarget<dynamic>(
+            child: DragTarget(
               onWillAccept: (data) {
                 print(data);
                 return true;
               },
               onLeave: (data) {},
               onAccept: (data) {
-                if (data['from'] == index) {
-                  return;
-                }
-                childres[data['from']].remove(data['string']);
-                childres[index].add(data['string']);
+                print('here');
+                // TODO: Add card to the list
+                // if (data['from'] == index) {
+                //   return;
+                // }
+                // childres[data['from']].remove(data['string']);
+                // childres[index].add(data['string']);
                 print(data);
                 setState(() {});
               },
@@ -292,21 +290,21 @@ class _HomePageState extends State<HomePage> {
     return Container(
       width: 300.0,
       margin: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
-      child: Draggable<dynamic>(
+      child: Draggable(
         feedback: Material(
           elevation: 5.0,
           child: Container(
             width: 284.0,
             padding: const EdgeInsets.all(16.0),
             color: Colors.greenAccent,
-            child: Text(childres[index][innerIndex]),
+            child: Text(childres[index][innerIndex]!),
           ),
         ),
         childWhenDragging: Container(),
         child: Container(
           padding: const EdgeInsets.all(16.0),
           color: Colors.greenAccent,
-          child: Text(childres[index][innerIndex]),
+          child: Text(childres[index][innerIndex]!),
         ),
         data: {"from": index, "string": childres[index][innerIndex]},
       ),
