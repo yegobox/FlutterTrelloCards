@@ -62,6 +62,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_list_drag_and_drop:
+    dependency: "direct main"
+    description:
+      path: "../flutter_list_drag_and_drop"
+      relative: true
+    source: path
+    version: "0.1.5"
   flutter_test:
     dependency: "direct dev"
     description: flutter
