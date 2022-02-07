@@ -13,13 +13,3 @@ dependencies:
   cupertino_icons:
   # flutter_list_drag_and_drop: ^0.1.6
   flutter_list_drag_and_drop:
-
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-
-flutter:
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
-  uses-material-design: true
