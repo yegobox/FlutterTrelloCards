@@ -4,12 +4,10 @@ publish_to: "none"
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.16.0 <3.0.0"
+  sdk: ">=2.17.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-
   cupertino_icons:
-  # flutter_list_drag_and_drop: ^0.1.6
-  flutter_list_drag_and_drop:
+  flutter_list_drag_and_drop: ^0.1.8
