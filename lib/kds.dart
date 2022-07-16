@@ -1,3 +1,6 @@
+import 'dart:collection';
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_list_drag_and_drop/drag_and_drop_list.dart';
 
@@ -246,6 +249,7 @@ class _KDSState extends State<KDS> {
                             index, childres[index].indexOf(item));
                       },
                       onDragFinish: (oldIndex, newIndex) {
+                        log("we are dragging");
                         _handleReOrder(oldIndex, newIndex, index);
                       },
                       canBeDraggedTo: (one, two) => true,
@@ -264,13 +268,11 @@ class _KDSState extends State<KDS> {
               },
               onLeave: (data) {},
               onAccept: (data) {
-                print('here');
-                // TODO: Add card to the list
-                // if (data['from'] == index) {
-                //   return;
-                // }
-                // childres[data['from']].remove(data['string']);
-                // childres[index].add(data['string']);
+                data as LinkedHashMap<String, Object?>;
+
+                int a = int.parse(data['from'].toString());
+                childres[a].remove(data['string']);
+                childres[index].add(data['string'].toString());
                 print(data);
                 setState(() {});
               },
