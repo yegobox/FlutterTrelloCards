@@ -13,3 +13,7 @@ class KDSStandalone extends StatelessWidget {
     );
   }
 }
+
+// Understanding drap and drop before working on a feature.
+// https://medium.com/flutter-community/a-deep-dive-into-draggable-and-dragtarget-in-flutter-487919f6f1e4
+// https://docs.flutter.dev/cookbook/effects/drag-a-widget

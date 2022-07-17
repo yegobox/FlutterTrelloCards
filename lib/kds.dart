@@ -263,7 +263,6 @@ class _KDSState extends State<KDS> {
           Positioned.fill(
             child: DragTarget(
               onWillAccept: (data) {
-                print(data);
                 return true;
               },
               onLeave: (data) {},
@@ -277,8 +276,8 @@ class _KDSState extends State<KDS> {
                 setState(() {});
               },
               builder: (context, accept, reject) {
-                print("--- > $accept");
-                print(reject);
+                log("--- > $accept");
+                log("--- > $reject");
                 return Container();
               },
             ),
