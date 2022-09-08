@@ -57,7 +57,7 @@ class _KDSState extends State<KDS> {
                   height: 30.0,
                 ),
                 Center(
-                  child: RaisedButton(
+                  child: TextButton(
                     onPressed: () {
                       Navigator.of(context).pop();
                       _addCard(_cardTextController.text.trim());
@@ -106,7 +106,7 @@ class _KDSState extends State<KDS> {
                   height: 30.0,
                 ),
                 Center(
-                  child: RaisedButton(
+                  child: TextButton(
                     onPressed: () {
                       Navigator.of(context).pop();
                       _addCardTask(index, _taskTextController.text.trim());
