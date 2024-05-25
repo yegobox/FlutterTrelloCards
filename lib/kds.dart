@@ -239,24 +239,24 @@ class _KDSState extends State<KDS> {
                     ),
                   ),
                 ),
-                SingleChildScrollView(
-                  child: Container(
-                    height: MediaQuery.of(context).size.height * 0.7,
-                    child: DragAndDropList<String?>(
-                      childres[index],
-                      itemBuilder: (BuildContext context, item) {
-                        return _buildCardTask(
-                            index, childres[index].indexOf(item));
-                      },
-                      onDragFinish: (oldIndex, newIndex) {
-                        log("we are dragging");
-                        _handleReOrder(oldIndex, newIndex, index);
-                      },
-                      canBeDraggedTo: (one, two) => true,
-                      dragElevation: 8.0,
-                    ),
-                  ),
-                ),
+                // SingleChildScrollView(
+                //   child: Container(
+                //     height: MediaQuery.of(context).size.height * 0.7,
+                //     child: DragAndDropList<String?>(
+                //       childres[index],
+                //       itemBuilder: (BuildContext context, item) {
+                //         return _buildCardTask(
+                //             index, childres[index].indexOf(item));
+                //       },
+                //       onDragFinish: (oldIndex, newIndex) {
+                //         log("we are dragging");
+                //         _handleReOrder(oldIndex, newIndex, index);
+                //       },
+                //       canBeDraggedTo: (one, two) => true,
+                //       dragElevation: 8.0,
+                //     ),
+                //   ),
+                // ),
               ],
             ),
           ),
